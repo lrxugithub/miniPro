@@ -1,0 +1,18 @@
+.container {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        /* position: relative; */
+    }
+    .center {
+        margin:5px auto;
+    }
+    .imgInput {
+        height: 100px;
+        border: 2px dashed #999;
+        border-radius: 8px;
+    }
+    .imgInput:hover {
+        background:rgba(240,240,240,.5);
+        border: 2px dotted pink;
+    }

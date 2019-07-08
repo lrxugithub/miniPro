@@ -1,0 +1,14 @@
+.text-indent{
+  text-indent: 50rpx;
+}
+.margin-xl{
+  margin: 0 30rpx;
+  opacity: 0.8;
+}
+.container-item{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2618042181,1164824656&fm=26&gp=0.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

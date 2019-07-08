@@ -1,0 +1,14 @@
+<view class="container">
+  <scroll-view scroll-x class="bg-white nav text-center">
+    <view class="cu-item {{index==tabCur?'text-blue cur':''}}" wx:for="{{mineTabs}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <view class="swimming-area" wx:if="{{tabCur==0}}">
+    <view class="margin flex" wx:for="{{swimingImgs}}" wx:key>
+      <view class='bg-gradual-blue flex-sub margin-right radius shadow-lg'>
+        <image src='{{item.url}}' mode='aspectFit' class='gif-black response' style='height:780rpx'></image>
+      </view>
+    </view>
+  </view>
+</view>

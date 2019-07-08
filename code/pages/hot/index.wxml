@@ -1,0 +1,27 @@
+<view class='container'>
+  <view class="cu-card case {{isCard?'no-card':''}}">
+    <view wx:for="{{1}}" wx:key class="cu-item shadow" bindtap="viewInfo">
+      <view class='image'>
+        <image src="/images/rubbish/banner.gif" mode="widthFix"></image>
+        <view class="cu-tag bg-blue">涨知识</view>
+        <view class='cu-bar bg-shadeBottom'>大妈：“你是什么垃圾？”</view>
+      </view>
+      <view class="cu-list menu menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg)"></view>
+          <view class='content flex-sub'>
+            <view class='text-grey'>垃圾分类要知道</view>
+            <view class='text-gray text-sm flex justify-between'>
+              十天前
+              <view class="text-gray text-sm">
+                <text class="icon-attentionfill"></text> 10
+                <text class="icon-appreciatefill"></text> 20
+                <text class="icon-messagefill"></text> 30
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

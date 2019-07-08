@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/hot/index",
+    "pages/basics/index",
+    "pages/plugin/index",
+    "pages/person/index",
+    "pages/home/index",
+    "pages/logs/logs",
+    "pages/rubbishList/index",
+    "pages/rubbishInfo/index",
+    "pages/font/jscssh5/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#009AFF",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/hot/index",
+        "iconPath": "images/tabbar/hotTopics.png",
+        "selectedIconPath": "images/tabbar/hotTopics_cur.png",
+        "text": "热点话题"
+      },
+      {
+        "pagePath": "pages/basics/index",
+        "iconPath": "images/tabbar/basics.png",
+        "selectedIconPath": "images/tabbar/basics_cur.png",
+        "text": "前端体系"
+      },
+      {
+        "pagePath": "pages/plugin/index",
+        "iconPath": "images/tabbar/extend.png",
+        "selectedIconPath": "images/tabbar/extend_cur.png",
+        "text": "借阅书籍"
+      },
+      {
+        "pagePath": "pages/person/index",
+        "iconPath": "images/tabbar/person.png",
+        "selectedIconPath": "images/tabbar/person_cur.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
