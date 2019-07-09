@@ -1,14 +1,16 @@
 {
   "pages": [
+    "pages/home/index",
     "pages/hot/index",
     "pages/basics/index",
     "pages/plugin/index",
     "pages/person/index",
-    "pages/home/index",
     "pages/logs/logs",
     "pages/rubbishList/index",
     "pages/rubbishInfo/index",
-    "pages/font/jscssh5/index"
+    "pages/bookInfo/index",
+    "pages/font/jscssh5/index",
+    "pages/font/public/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",

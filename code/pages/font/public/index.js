@@ -1,37 +1,26 @@
-// pages/rubishInfo/index.js
+// pages/font/public/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    preId: '',
-    preTitle: ''
+    src: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let id = options.id, title = options.title
-    switch(id){
-     case 'recyclable':
-        this.setPreInfo(id, title)
-        break;
-      case 'kitchen':
-        this.setPreInfo(id, title)
-        break;
-      case 'harmful':
-        this.setPreInfo(id, title)
-        break;
-      case 'other':
-        this.setPreInfo(id, title)
-        break;
+    let type = opstions.publicType, tempSrc=''
+    switch (type) {
+      case 'node':
+        tempSrc = ''
+        break
     }
+    // this.setData({ src: 'https://mp.weixin.qq.com/mp/homepage?__biz=MzU3MDk1NTQzNw==&hid=2&sn=445d0464a24ae558f9e71c94f2d8add1'})
   },
-  setPreInfo(id, title){
-    this.setData({ preId: id, preTitle: title })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -8,7 +8,6 @@ Page({
     ]
   },
   viewDetail: function (event) {
-    console.log(event)
     wx.showLoading({ title: '请稍后' })
     wx.navigateTo({
       url: '/pages/rubbishInfo/index?id='

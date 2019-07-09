@@ -189,6 +189,9 @@ Page({
           content: '个人类型小程序暂不支持跳转公众号',
           showCancel: false
         })
+        // wx.navigateTo({
+        //   url: '/pages/font/public/index',
+        // })
       } else {
         // 单击事件延时300毫秒执行，这和最初的浏览器的点击300ms延时有点像。
         that.lastTapTimeoutFunc = setTimeout(function () {

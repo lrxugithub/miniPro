@@ -1,0 +1,19 @@
+<view class="container">
+  <view class='bg-gradual-black flex-sub margin-right radius shadow-lg container-title'>
+    <view class='text-center padding'>划一划</view>
+  </view>
+  <view class="tower-swiper container-swiper" bindtouchmove="towerMove" bindtouchstart="towerStart" bindtouchend="towerEnd">
+    <view class='tower-item {{item.zIndex==1?"none":""}}' wx:for="{{towerList}}" wx:key style='transform: scale({{0.5+item.zIndex/10}});margin-left:{{item.mLeft*100-150}}rpx;z-index:{{item.zIndex}}'>
+      <view class='bg-img shadow-blur' style="background-image:url({{item.url}})"></view>
+    </view>
+  </view>
+  <view class="container-content" style="background-image:url({{bgUrl}})">
+    <view class='container-item margin-xl bg-white padding-xl radius shadow-lg'>
+      <view class='text-center margin-bottom text-xl  text-blue'>{{preTitle}}</view>
+      <view class='text-content'>
+        <view class='bg-white text-indent'>一本有趣的书。定位在针对社会现象所写的实用主义，通过世间百相的揭示，告诉你不吃亏的学问。如同一盘文化快餐，且不论营养价值多高，品后但觉爽心可口。不会绞尽脑汁，亦不会闹消化不良。会心处一笑，即可。“我不是教你诈，是让你认清这个世界！”刘墉笔下充斥了这一类哲理短句。</view>
+        <button class='cu-btn round linebordersize-grey shadow want-see'open-type="contact" bindcontact="wow">想看</button>
+      </view>
+    </view>
+  </view>
+</view>

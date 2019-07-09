@@ -1,0 +1,29 @@
+/* pages/bookInfo/index.wxss */
+.container{
+  overflow-x: hidden;
+}
+.container-title{
+  margin-top: 0rpx;
+  width: 100%;
+  height: 300rpx;
+}
+.container-swiper{
+  position: relative;
+  top: -220rpx;
+}
+.container-content{
+  position: absolute;
+  top: 520rpx;
+  width: 100%;
+  height: 1000rpx;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.container-item{
+  opacity: 0.8;
+  height: 600rpx;
+}
+.want-see{
+  float: right;
+  margin: 30rpx 20rpx 0 0;
+}

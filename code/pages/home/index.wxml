@@ -4,7 +4,7 @@
     <image class="index-img-sub" src="/images/index/index.png"></image>
   </view>
   <view class="userinfo">
-    <button class='cu-btn bg-blue margin-tb-sm lg' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">磨易夏</button>
+    <button class='cu-btn bg-blue margin-tb-sm lg' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">撸一夏</button>
     <block wx:else>
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     </block>

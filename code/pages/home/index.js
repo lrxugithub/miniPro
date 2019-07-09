@@ -66,7 +66,7 @@ Page({
         if(i == 100) {
           setTimeout(()=>{
             wx.reLaunch({
-              url: '/pages/basics/index',
+              url: '/pages/hot/index',
             })
           },1000)
         }

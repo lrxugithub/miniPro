@@ -1,5 +1,5 @@
 <view class="container">
-  <scroll-view scroll-x class="bg-white nav text-center">
+  <scroll-view scroll-x class="bg-white nav text-center person-tab-bar">
     <view class="cu-item {{index==tabCur?'text-blue cur':''}}" wx:for="{{mineTabs}}" wx:key bindtap='tabSelect' data-id="{{index}}">
       {{item.name}}
     </view>

@@ -1,21 +1,16 @@
 
 <view class="container">
-  <!-- <scroll-view scroll-x class="bg-white nav text-center ">
-    <view class="cu-item {{index==tabCur?'text-blue cur':''}}" wx:for="{{bookClassifies}}" wx:key bindtap='tabSelect' data-id="{{index}}">
-      {{item.name}}
-    </view>
-  </scroll-view> -->
   <view class="cu-card article {{isCard?'no-card':''}}">
-    <view wx:for="{{bookList}}" wx:key class="cu-item shadow">
-      <view class="cu-tag bg-blue">{{item.title}}</view>
-      <view class="title">这里有个戏精铲屎官，主子撸一下？</view>
+    <view wx:for="{{bookList}}" wx:key class="cu-item shadow" data-type="{{item.type}}" bindtap='viewInfo'>
+      <view class="cu-tag bg-blue">{{item.head}}</view>
+      <view class="title">{{item.title}}</view>
       <view class="content">
         <image src="https://image.weilanwl.com/img/4x3-1.jpg" mode="aspectFill"></image>
         <view class="desc">
-          <view class='text-content'> 这是一个伪铲屎官为了给自己的程序凑字数瞎几把乱写的一堆文字，了解一下就OK！ヾ(=･ω･=)o</view>
+          <view class='text-content'>{{item.content}}</view>
           <view>
-            <view class='cu-tag bg-red light sm round'>假装有猫系列</view>
-            <view class='cu-tag bg-green light sm round'>戏精系列</view>
+            <view class='cu-tag bg-red light sm round'>{{item.label1}}</view>
+            <view class='cu-tag bg-green light sm round'>{{item.lable2}}</view>
           </view>
         </view>
       </view>
