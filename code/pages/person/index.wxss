@@ -1,0 +1,9 @@
+.person-tab-bar{
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.swimming-area, .tips-arrea{
+  position: relative;
+  top: 100rpx;
+}

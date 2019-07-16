@@ -1,0 +1,8 @@
+{ 
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "视频播放",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "txv-video": "plugin://tencentVideo/video"
+  }
+}

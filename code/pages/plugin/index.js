@@ -13,7 +13,6 @@ Page({
     })
   },
   viewInfo(e){
-    console.log('e',e)
     let type = e.currentTarget.dataset.type
     if (type == 'cultural'){
       wx.navigateTo({

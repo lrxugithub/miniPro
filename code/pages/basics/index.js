@@ -43,7 +43,7 @@ Page({
           windowHeight: res.windowHeight,
           imgWidth: imgWidth
         }, function () {
-          that.loadMoreImages(); //初始化数据
+          that.loadMoreImages(false); //初始化数据
         });
       },
     })
@@ -81,7 +81,7 @@ Page({
     });
   },
   //加载更多图片
-  loadMoreImages: function () {
+  loadMoreImages: function (flag) {
     var imgs = [
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562574631857&di=3e9e8f05ac0efae0df0a87a6ab84335f&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2Ff1ec9cc0f49db910829f93bcdf4d2723464012b3.jpg',//js html css
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563170632&di=59482ba48aa0fe75166dd51dfd661e4b&imgtype=jpg&er=1&src=http%3A%2F%2Fphotocdn.sohu.com%2F20160329%2FImg442736468.jpg',//计算机基础
@@ -94,40 +94,42 @@ Page({
       'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562575704974&di=c7c7dd8f267252001656627db0d37df8&imgtype=0&src=http%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_jpg%2Fmw5B4Cb0DmicrQuA7dqfgeic8jwzWLz6EZYaYUgFApLEP8icYia5Xyd3tia9xsibgibjMTlqy0lKMbWC8PRVib4Jb6hVDw%2F640%3Fwx_fmt%3Djpeg',
       
     ]
-    // var imgs = [
-    //   'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1409185525,4059560780&fm=26&gp=0.jpg',
-    //   'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4076355782,2436939971&fm=15&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=777075993,2126273204&fm=11&gp=0.jpg',
-    //   'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=57777155,3251523579&fm=11&gp=0.jpg',
-    //   'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3825727093,2830650732&fm=11&gp=0.jpg',
-    //   'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2379065095,654347953&fm=26&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2749679283,2472217536&fm=11&gp=0.jpg',
-    //   'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=677128138,409184861&fm=11&gp=0.jpg',
-    //   'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1884091074,3049103326&fm=26&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1600363417,3661952978&fm=11&gp=0.jpg',
-    //   'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2069544162,3090555174&fm=11&gp=0.jpg',
-    //   'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3328655038,3143543956&fm=26&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3953624046,2332872335&fm=26&gp=0.jpg',
-    //   'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=717009955,687560133&fm=26&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4243037288,2388509769&fm=26&gp=0.jpg',
-    //   'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2644451528,4180971732&fm=26&gp=0.jpg',
-    //   'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2658655215,924706045&fm=26&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=400545645,1325440240&fm=26&gp=0.jpg',
-    //   'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2735743532,3162562682&fm=11&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2357555025,1781222560&fm=26&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1604156508,3282489713&fm=26&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=380663325,2271064034&fm=26&gp=0.jpg',
-    //   'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=174537541,3462862985&fm=26&gp=0.jpg',
-    //   'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1752649241,364583051&fm=26&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2890516059,4166188770&fm=27&gp=0.jpg',
-    //   'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2435144503,200941795&fm=11&gp=0.jpg',
-    //   'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=877833827,2847590581&fm=26&gp=0.jpg',
-    //   'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=894452177,2810600152&fm=11&gp=0.jpg',
-    //   'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4053642431,248486335&fm=27&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2914607659,905736210&fm=11&gp=0.jpg',
-    //   'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1629456501,1514429218&fm=26&gp=0.jpg',
-    // ];
-
+    var replaceimgs = [
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1409185525,4059560780&fm=26&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4076355782,2436939971&fm=15&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=777075993,2126273204&fm=11&gp=0.jpg',
+      'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=57777155,3251523579&fm=11&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3825727093,2830650732&fm=11&gp=0.jpg',
+      'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2379065095,654347953&fm=26&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2749679283,2472217536&fm=11&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=677128138,409184861&fm=11&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1884091074,3049103326&fm=26&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1600363417,3661952978&fm=11&gp=0.jpg',
+      'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2069544162,3090555174&fm=11&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3328655038,3143543956&fm=26&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3953624046,2332872335&fm=26&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=717009955,687560133&fm=26&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4243037288,2388509769&fm=26&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2644451528,4180971732&fm=26&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2658655215,924706045&fm=26&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=400545645,1325440240&fm=26&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2735743532,3162562682&fm=11&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2357555025,1781222560&fm=26&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1604156508,3282489713&fm=26&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=380663325,2271064034&fm=26&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=174537541,3462862985&fm=26&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1752649241,364583051&fm=26&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2890516059,4166188770&fm=27&gp=0.jpg',
+      'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2435144503,200941795&fm=11&gp=0.jpg',
+      'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=877833827,2847590581&fm=26&gp=0.jpg',
+      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=894452177,2810600152&fm=11&gp=0.jpg',
+      'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4053642431,248486335&fm=27&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2914607659,905736210&fm=11&gp=0.jpg',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1629456501,1514429218&fm=26&gp=0.jpg',
+    ];
+    if (flag) {
+      imgs = replaceimgs
+    }
     var tmpArr = [];
     for (let i = 0; i < 22; i++) {
       var index = parseInt(Math.random() * 100) % imgs.length;
@@ -181,21 +183,23 @@ Page({
 
       // 如果两次点击时间在300毫秒内，则认为是双击事件
       if (currentTime - lastTapTime < 300) {
-        console.log("double tap")
         // 成功触发双击事件时，取消单击事件的执行
         clearTimeout(that.lastTapTimeoutFunc);
-        wx.showModal({
-          title: '提示',
-          content: '个人类型小程序暂不支持跳转公众号',
-          showCancel: false
-        })
+          that.previewImg(e)
         // wx.navigateTo({
         //   url: '/pages/font/public/index',
         // })
       } else {
         // 单击事件延时300毫秒执行，这和最初的浏览器的点击300ms延时有点像。
         that.lastTapTimeoutFunc = setTimeout(function () {
-          that.previewImg(e)
+          wx.showModal({
+            title: '提示',
+            content: '个人类型小程序暂不支持跳转公众号，铲屎官会尽快升级,先看看神仙吧',
+            showCancel: false,
+            success: () => {
+              that.loadMoreImages(true)
+            }
+          })
         }, 300);
       }
     }

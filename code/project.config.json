@@ -42,9 +42,31 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "首页",
-					"pathName": "pages/homePage/index",
+					"pathName": "pages/hot/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "前端体系",
+					"pathName": "pages/basics/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "借阅书籍",
+					"pathName": "pages/plugin/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "铲屎日常",
+					"pathName": "pages/person/index",
+					"query": "",
 					"scene": null
 				}
 			]

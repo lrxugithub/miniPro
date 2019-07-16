@@ -78,7 +78,6 @@ Page({
       }
       list[list.length - 1].mLeft = mLeft;
       list[list.length - 1].zIndex = zIndex;
-      console.log()
       this.setData({
         towerList: list,
         bgUrl: list[this.findIndexByZIndex(list)].url
@@ -106,8 +105,6 @@ Page({
     return i
   },
   wow(e){
-    console.log(e.path)
-    console.log(e.query)
     wx.showModal({
       title: '来自喵星人的问候',
       content: '已向主人发出喵喵喵!',

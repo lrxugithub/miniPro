@@ -11,4 +11,32 @@
       </view>
     </view>
   </view>
+
+  <view class="tips-arrea" wx:if="{{tabCur==1}}">
+    <view class="cu-card case {{isCard?'no-card':''}}">
+      <view wx:for="{{sectionList}}" wx:key class="cu-item shadow" data-webview="{{item.isWebview}}" data-url="{{item.switchUrl}}" bindtap="viewInfo" data-webUrl="{{item.webUrl}}">
+        <view class='image'>
+          <image src="{{item.backgroundUrl}}" mode="widthFix"></image>
+          <view class="cu-tag bg-blue">{{item.corner}}</view>
+          <view class='cu-bar bg-shadeBottom'>{{item.content}}</view>
+        </view>
+        <view class="cu-list menu menu-avatar">
+          <view class="cu-item">
+            <view class="cu-avatar round lg" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg)"></view>
+            <view class='content flex-sub'>
+              <view class='text-grey'>铲屎的都知道了</view>
+              <view class='text-gray text-sm flex justify-between'>
+                1月前(反正很久了)
+                <view class="text-gray text-sm">
+                  <text class="icon-attentionfill"></text> 10
+                  <text class="icon-appreciatefill"></text> 20
+                  <text class="icon-messagefill"></text> 30
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

@@ -12,12 +12,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let type = opstions.publicType, tempSrc=''
-    switch (type) {
-      case 'node':
-        tempSrc = ''
-        break
-    }
+    // let type = opstions.publicType, tempSrc=''
+    // switch (type) {
+    //   case 'node':
+    //     tempSrc = ''
+    //     break
+    // }
     // this.setData({ src: 'https://mp.weixin.qq.com/mp/homepage?__biz=MzU3MDk1NTQzNw==&hid=2&sn=445d0464a24ae558f9e71c94f2d8add1'})
   },
 

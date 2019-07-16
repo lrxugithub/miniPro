@@ -10,7 +10,9 @@
     "pages/rubbishInfo/index",
     "pages/bookInfo/index",
     "pages/font/jscssh5/index",
-    "pages/font/public/index"
+    "pages/font/public/index",
+    "pages/video/index",
+    "pages/webview/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
@@ -27,7 +29,7 @@
         "pagePath": "pages/hot/index",
         "iconPath": "images/tabbar/hotTopics.png",
         "selectedIconPath": "images/tabbar/hotTopics_cur.png",
-        "text": "热点话题"
+        "text": "炫视频"
       },
       {
         "pagePath": "pages/basics/index",
@@ -45,9 +47,15 @@
         "pagePath": "pages/person/index",
         "iconPath": "images/tabbar/person.png",
         "selectedIconPath": "images/tabbar/person_cur.png",
-        "text": "个人中心"
+        "text": "铲屎日常"
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "tencentVideo": {
+      "version": "1.3.6",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
 }
